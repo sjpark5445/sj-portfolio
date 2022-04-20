@@ -1,0 +1,355 @@
+/* 폰트 */
+
+/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+} */
+
+/* 공통 */
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    word-break: keep-all;
+}
+html {
+    font-size: 16px;
+}
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+ul li {
+    list-style: none;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+h2 {
+    display: none;
+}
+h3 {
+    padding-bottom: 1vw;
+}
+p {
+    white-space: pre-line;
+}
+
+/* 개별 */
+.container {
+    width: 100%; height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(62em, auto);
+}
+.gallery {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 20vw;
+    margin: 0.5vw;
+    opacity: 0.5;
+    cursor: grab;
+    position: relative;
+}
+.gallery:hover {
+    opacity: 1;
+    transition: all .3s;
+}
+.gallery a {
+    width: 100%; height: 100%;
+}
+.txt {
+    text-align: left;
+    margin: 0.5vw;
+    margin-top: 1.5vw;
+    height: 4em;
+}
+.txt a {
+    font-size: 1.2rem;
+    width:100%; height: 100%;
+    line-height: 1.4rem;
+}
+.txt a span {
+    font-size: 1rem;
+}
+/* 표지 */
+header {
+    width: 100%;
+    background-color: #222;
+    position: relative;
+    overflow: hidden;
+}
+.layout_fix {
+    width: 62.5vw; height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+.title {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.title h1 {
+    color: #3fa568;
+    font-size: 3.5rem;
+    line-height: 4rem;
+    margin-bottom: 0.5em;
+    position: absolute;
+    top: 40%; left: 0;
+    opacity: 0;
+    transition: all 2s;
+}
+.title h4 {
+    color: #fff;
+    font-size: 1.5rem; font-weight: 100;
+    position: absolute;
+    top: 55%; left: 0;
+    opacity: 0;
+    transition: all 2s;
+}
+.circle1 {
+    width: 70vw; height: 70vw;
+    background-color: #3fa568;
+    position: absolute;
+    bottom: -20%; left: 100%;
+    border-radius: 50%;
+    transition: all .5s ease-out;
+}
+.circle2 {
+    width: 30vw; height: 30vw;
+    background-color: #fff;
+    position: absolute;
+    bottom: -60%; left: 50%;
+    border-radius: 50%;
+    transition: all .5s ease-out;
+}
+.logo {
+    width: 10.41vw; height: 2.08vw;
+    display: flex;
+    align-items: center;
+}
+.logo a {
+    color: #fff;
+    width: 100%; height: 100%;
+    background: url(../images/logo.png) center no-repeat;
+    background-size: cover;
+}
+.logo a:hover {
+    color: #3fa568;
+    transition: all .5s;
+}
+header nav {
+    width: 100%; height: 5vw;
+    padding: 0 18.75%;
+    display: flex;
+    background-color: #000;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 50;
+}
+header nav ul {
+    display: flex;
+    width: 60%;
+    height: 100%;
+}
+header nav li {
+    width: 25%; height: 100%;
+}
+header nav li a {
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 1.3rem;
+}
+header nav li a:focus{
+    color: #3fa568;
+}
+header nav li a:hover {
+    color: #3fa568;
+    transition: all .5s;
+}
+
+/* 웹 */
+.web {
+    width: 100%;
+    background-color: #eee;
+}
+.web .layout_fix {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    align-content: center;
+}
+.web .layout_fix h3 {
+    grid-column: 1 / 3;
+    margin: 0.5vw;
+    font-size: 1.5rem;
+    color: #3fa568;
+}
+.web .layout_fix .gallery:nth-of-type(1) {
+    background-image: url(../images/slide3.jpg);
+}
+.web .layout_fix .gallery:nth-of-type(2) {
+    background-image: url(../images/slide2.jpg);
+}
+.web .txt a {
+    width: 40%;
+}
+
+/* 디자인 */
+.design {
+    width: 100%;
+}
+.design .layout_fix h3 {
+    grid-column: 1 / 5;
+    margin: 0.5vw;
+    font-size: 1.5rem;
+    color: #3fa568;
+}
+.design .layout_fix {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: min-content;
+    align-content: center;
+}
+.design .layout_fix .gallery:nth-of-type(1) {
+    background-image: url(../images/brochure.jpg);
+}
+.design .layout_fix .gallery:nth-of-type(2) {
+    background-image: url(../images/dawn.jpg);
+}
+.design .layout_fix .gallery:nth-of-type(3) {
+    background-image: url(../images/Feed.jpg);
+}
+.design .layout_fix .gallery:nth-of-type(4) {
+    background-image: url(../images/10.jpg);
+}
+/* 연락처 */
+footer {
+    width: 100%; height: 30em;
+    background-color: #222;
+}
+footer .layout_fix {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .layout_fix nav {
+    width: 100%; height: 100%;
+}
+footer .layout_fix nav ul {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+footer .layout_fix nav li {
+    width: 100%;
+}
+footer .layout_fix nav a {
+    color: #fff;
+    margin: 1em;
+    width: 100%; height: 100%;
+    font-size: 1.5rem;
+}
+footer .layout_fix nav li a {
+    color: #3fa568;
+}
+footer .layout_fix nav a span {
+    margin-left: 1em;
+    color: #fff;
+    font-size: 1.2rem; font-weight: 100;
+}
+
+/* 팝업창 */
+
+.modal {
+    width: 50vw; height: 40vh;
+    background: linear-gradient(to right, #000000, #434343);
+    border-radius: 2px;
+    position: fixed;
+    top: 25%; left: 25%;
+    padding: 5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    visibility: hidden;
+}
+.modal h3 {
+    color: #3fa568;
+    margin-bottom: 0.5em;
+    font-size: 1.5rem;
+}
+.modal h5 {
+    color: #fff;
+    margin-bottom: 1em;
+    font-size: 1.2rem; font-weight: 400;
+}
+.modal p {
+    color: #fff;
+    display: none;
+    font-weight: 100;
+}
+#modalClose {
+    width: 1.5vw; height: 1.5vw;
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    position: absolute;
+    top: 2%; right: 1.2%;
+}
+.modalOpen {
+    visibility: visible;
+}
+
+/* 스타일가이드 */
+
+.style_guide {
+    position: absolute;
+    top: 35%; left: 30%;
+    width: 12vw; height: 2.8vw;
+    background-color: #000;
+    border-radius: 2px;
+    display: flex;
+    visibility: collapse;
+}
+.style_guide a {
+    color: #fff;
+    font-weight: 100;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    padding-bottom: 5px;
+}
+.style_guide a:hover {
+    color: #3fa568;
+}
+.style_guide a:first-child::after {
+    content: "";
+    width: 4px; height: 4px;
+    background-color: #fff;
+    position: absolute;
+    top: 48%; left: 49.4%;
+    transform: rotate(45deg);
+}
+.style_guide::after {
+    content: "";
+    width: 2vw; height: 2vw;
+    position: absolute;
+    top: 35%; left: 42%;
+    background-color: #000;
+    transform: rotate(45deg);
+}
+
+.gallery:hover > .style_guide {
+    visibility: visible;
+}
