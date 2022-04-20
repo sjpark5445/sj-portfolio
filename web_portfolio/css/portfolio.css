@@ -50,12 +50,11 @@ p {
     background-repeat: no-repeat;
     height: 20vw;
     margin: 0.5vw;
-    opacity: 0.5;
     cursor: grab;
     position: relative;
 }
-.gallery:hover {
-    opacity: 1;
+.design .gallery:hover {
+    opacity: 0.5;
     transition: all .3s;
 }
 .gallery a {
@@ -220,11 +219,14 @@ header nav li a:hover {
     grid-auto-rows: min-content;
     align-content: center;
 }
+.design .layout_fix .gallery h2 a {
+    width: 100%; height: 100%;
+}
 .design .layout_fix .gallery:nth-of-type(1) {
     background-image: url(../images/brochure.jpg);
 }
 .design .layout_fix .gallery:nth-of-type(2) {
-    background-image: url(../images/dawn.jpg);
+    background-image: url(../images/dawn2.jpg);
 }
 .design .layout_fix .gallery:nth-of-type(3) {
     background-image: url(../images/Feed.jpg);

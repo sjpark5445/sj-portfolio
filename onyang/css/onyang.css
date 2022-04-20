@@ -1,0 +1,986 @@
+/* font */
+/* #391b17 */
+
+@font-face {
+    font-family: 'LeferiBaseType-BoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-BoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'LeferiBaseType-RegularA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/LeferiBaseType-RegularA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JSongMyung-Regular-KO';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/JSongMyung-Regular-KO.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 공통 */
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #222;
+    font-family: 'LeferiBaseType-RegularA';
+}
+html {
+    font-size: 10px;
+}
+ul li {
+    list-style: none;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+.layout_fix {
+    width: 62.5%; height: 100%;
+    font-size: 1rem;
+    margin: 0 auto; padding: 0 2em;
+}
+h2 {
+    display: none;
+}
+p {
+    /* white-space: pre-line; */
+    letter-spacing: -0.05em;
+    word-break: keep-all;
+}
+/* 개별 */
+
+.onyang_wrap {
+    width: 100%; height: 100vh;
+    background-color: lightgray;
+    font-size: 1rem;
+}
+.content_wrap {
+    width: 100%; height: calc(54.68vw + (108em * 3));
+}
+
+/* header */
+
+header {
+    width: 100%; height: 8em;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 58;
+}
+header .layout_fix {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+header .layout_fix .logo {
+    width: 13em; height: 3em;
+}
+header .layout_fix .logo a {
+    width: 100%; height: 100%;
+    background: url(../images/logo.png) center no-repeat;
+    background-size: cover;
+}
+
+/* main_menu */
+
+header nav {
+    width: 60%; height: 100%;
+    font-size: 1.8rem;
+}
+header nav:hover .main>ul>li>a {
+    color: #391b17;
+    transition: all .5s;
+}
+header nav:hover .sub a, .sub:hover a {
+    opacity: 1;
+    transition: all .5s;
+}
+.main {
+    width: 100%; height: 100%;
+}
+.main ul {
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.main li {
+    width: 20%; height: 100%;
+}
+.main a {
+    width: 100%; height: 100%;
+    font-family: 'LeferiBaseType-BoldA';
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.layout_fix .h_menu {
+    display: flex;
+    align-items: center;
+    width: 3em; height: 100%;
+    padding-bottom: 0.6em;
+    position: absolute;
+    top: 0; right: 0;
+    z-index: 80;
+    visibility: hidden;
+}
+.layout_fix .h_menu .stick_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%; height: 2em;
+    position: relative;
+}
+.layout_fix .h_menu .stick_box div {
+    width: 100%; height: 20%;
+    background-color: #fff;
+    border-radius: 2em;
+    position: absolute;
+    left: 0;
+}
+.h_menu .stick_box div:nth-child(1) {
+    top: 0;
+    transition: all .4s;
+}
+.h_menu .stick_box div:nth-child(2) {
+    top: 40%;
+    transition: all .4s;
+}
+.h_menu .stick_box div:nth-child(3) {
+    bottom: 0;
+    transition: all .4s;
+}
+.hm_active div:nth-child(1) {
+    transform: translateY(0.8em) rotate(-45deg);
+    transition: all .4s;
+}
+.hm_active div:nth-child(2) {
+    opacity: 0;
+    transition: all .4s;
+}
+.hm_active div:nth-child(3) {
+    transform: translateY(-0.8em) rotate(45deg);
+    transition: all .4s;
+}
+/* sub_menu */
+
+.sub {
+    display: none;
+    width: 100%; height: 320%;
+    background-color: #fff;
+    z-index: 10;
+}
+.sub ul {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    z-index: 11;
+}
+.sub li {
+    width: 100%; height: 20%;
+    z-index: 12;
+}
+.sub a {
+    color: #391b17;
+    z-index: 13;
+    display: flex;
+    padding-top: 0.25em;
+    font-family: 'LeferiBaseType-RegularA';
+    opacity: 0;
+    transition: all .3s;
+}
+.sub a:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.sub_box {
+    display: none;
+    width: 100%; height: 350%;
+    background-color: #fff;
+    position: absolute;
+    top: 8em; left: 0;
+    z-index: 9;
+}
+/* 햄버거메뉴 서브 */
+.h_sub {
+    width: 30em; height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 8em; right: -30em;
+    transition: all .5s;
+}
+.h_sub ul {
+    width: 100%; height: 50vh;
+}
+.h_sub li {
+    width: 100%; height: 15%;
+    border-bottom: 1px solid #fff;
+}
+.h_sub a {
+    width: 100%; height: 100%;
+    font-family: 'JSongMyung-Regular-KO';
+    font-size: 3rem;
+    line-height: 4.4em;
+    padding-left: 10%;
+    color: #391b17;
+}
+/* slide */
+
+.slide {
+    width: 100%; height: 54.68vw;
+    overflow: hidden;
+    position: relative;
+}
+.slide ul {
+    width: 400%; height: 100%;
+    display: flex;
+    position: absolute;
+}
+.slide li {
+    width: calc(100%/4); height: 100%;
+}
+.slide li a {
+    width: 100%; height: 100%;
+}
+.slide1 {
+    background: url(../images/slide1.jpg) center no-repeat;
+    background-size: cover;
+}
+.slide2 {
+    background: url(../images/slide2.jpg) center no-repeat;
+    background-size: cover;
+}
+.slide3 {
+    background: url(../images/slide3.jpg) center no-repeat;
+    background-size: cover;
+}
+.slide4 {
+    background: url(../images/slide4.jpg) center no-repeat;
+    background-size: cover;
+}
+#left_btn,
+#right_btn {
+    width: 3.5em; height: 3.5em;
+    z-index: 20;
+    position: absolute;
+    top: 27vw; 
+}
+#left_btn {
+    background:url(../images/leftbtn.png) center no-repeat;
+    background-size: cover;
+    left: 0;
+    margin-left: 10em;
+}
+#right_btn {
+    background:url(../images/rightbtn.png) center no-repeat;
+    background-size: cover;
+    right: 0;
+    margin-right: 10em;
+}
+
+/* special */
+
+.special {
+    width: 100%; height: 108em;
+    position: relative;
+    background: url(../images/fish_bg.jpg) center no-repeat;
+    background-size: cover;
+    padding: 8em 0;
+}
+.special .layout_fix {
+    display: flex;
+    position: relative;
+}
+/* txt part */
+.sp_txt {
+    width: 60%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    position: absolute;
+    top: 0; left: 0;
+    padding-top: 28.8em;
+}
+.sp_txt h3 {
+    font-family: 'JSongMyung-Regular-KO';
+    font-size: 5rem; font-weight: 100;
+    color: #391b17;
+    margin-bottom: 1.48em;
+}
+.sp_txt h4 {
+    font-size: 2.4rem;
+    color: #391b17;
+    margin-bottom: calc(8em / 24em);
+    padding-top: 2em;
+}
+.sp_txt h5 {
+    font-size: 2rem;
+    color:#9e3434;
+    margin-bottom: 1.9em;
+}
+.sp_txt p {
+    font-size: 1.8rem;
+    line-height: 1.6em;
+    color: #391b17;
+}
+/* image part */
+.sp_img {
+    width: 51.28%; height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 48.7%;
+    z-index: 5;
+}
+.sp_img ul {
+    width: 100%; height: 27.6vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+.sp_img li {
+    width: 9.375vw; height: 13.8vw;
+    margin-right: 0.78vw;
+}
+.sp_img a {
+    width: 100%; height: 100%;
+}
+.sp_img a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+    transition: all .5s ease-in-out;
+}
+.sp_img li:nth-of-type(3),
+.sp_img li:nth-of-type(4) {
+    visibility: collapse;
+}
+.sp_img li:nth-of-type(5),
+.sp_img li:nth-of-type(6) {
+    margin-top: 1.5em;
+}
+
+.sp_img li:nth-of-type(1) a {
+    background-image:url(../images/유산의일상.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.sp_img li:nth-of-type(2) a {
+    background-image:url(../images/일상의공간.jpg);
+    background-size: cover;
+    background-position: center top;
+}
+.sp_img li:nth-of-type(5) a {
+    background-image:url(../images/부엌.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.sp_img li:nth-of-type(6) a {
+    background-image:url(../images/탈.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* artist */
+
+.artist {
+    width: 100%; height: 108em;
+    background-color: #b5b5b5;
+    padding-top: 8em;
+}
+.layout_fix .art_title {
+    padding-top: 2em;
+    width: 100%; height: 12.2em;
+    display: flex;
+    justify-content: space-between;
+}
+.art_title h3 {
+    width: 65.8%; height: 100%;
+    font-family: 'JSongMyung-Regular-KO';
+    font-size: 5rem; font-weight: 100;
+    color: #391b17;
+}
+.viewmore {
+    width: 31.62%; height: 100%;
+}
+.viewmore p {
+    font-size: 1.8rem;
+    line-height: 1.55em;
+    margin-bottom: 0.55em;
+}
+.viewmore h5 {
+    font-family: 'LeferiBaseType-BoldA';
+    font-size: 1.8rem;
+    position: relative;
+}
+.viewmore h5::after {
+    content: "";
+    width: 1.67em; height: 0.44em;
+    background: url(../images/viewmore.png) center no-repeat;
+    position: absolute;
+    top: 0.17em; left: 5.22em;
+}
+
+/* image */
+
+.art_img {
+    width: 100%; height: 26vw;
+    display: flex;
+}
+.art_img a {
+    width: calc(100%/3); height: 100%;
+    margin: 0 1.5em;
+}
+.art_img a:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: darken;
+    transition: all .5s ease-in-out;
+}
+.art_img a:nth-of-type(1) {
+    margin-left: 0;
+    background-image: url(../images/artist1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.art_img a:nth-of-type(2) {
+    background-image: url(../images/artist2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.art_img a:nth-of-type(3) {
+    margin-right: 0;
+    background-image: url(../images/artist3.jpg);
+    background-size: cover;
+    background-position: right center;
+}
+
+/* txt */
+.art_txt {
+    width: 100%; height: 17.8em;
+    display: flex;
+}
+.art_txt div {
+    width: calc(100%/3); height: 100%;
+    margin: 0 1.5em;
+}
+.art_txt div:nth-of-type(1) {
+    margin-left: 0;
+}
+.art_txt div:nth-of-type(3) {
+    margin-right: 0;
+}
+.art_txt div h4 {
+    font-size: 2.4rem;
+    color: #391b17;
+    margin-top: 1.4em;
+    margin-bottom: 0.83em;
+}
+.art_txt div p {
+    font-size: 1.6rem;
+    line-height: 1.6em;
+}
+
+/* education */
+
+.edu {
+    width: 100%; height: 108em;
+    background: url(../images/cloud_bg.jpg) center no-repeat;
+    background-size: cover;
+}
+.edu h3 {
+    font-family: 'JSongMyung-Regular-KO';
+    font-size: 5rem; font-weight: 100;
+    color: #391b17;
+}
+.edu p {
+    font-size: 1.8rem;
+    line-height: 1.55em;
+    margin-bottom: 0.55em;
+}
+.edu h5 {
+    font-family: 'LeferiBaseType-BoldA';
+    font-size: 1.8rem;
+    position: relative;
+    color: #888;
+}
+.edu h5::after {
+    content: "";
+    width: 1.67em; height: 0.44em;
+    background: url(../images/viewmore_gray.png) center no-repeat;
+    position: absolute;
+    top: 0.17em; left: 6.39em;
+}
+.edu .layout_fix {
+    padding-top: 8em;
+    height: 100%;
+    display: flex;
+}
+.edu_left {
+    padding-top: 7.4em;
+    width: 50%; height: 100%;
+}
+.edu_right {
+    padding-top: 7.4em;
+    width: 50%; height: 100%;
+}
+.edu_title1 {
+    width: 100%; height: 10.2em;
+}
+.edu_img {
+    width: 100%; height: 16.46vw;
+}
+.edu_left .edu_img {
+    background: url(../images/edu1.jpg) center no-repeat;
+    background-size: cover;
+}
+.edu_right .edu_img {
+    background: url(../images/edu2.jpg) center no-repeat;
+    background-size: cover;
+}
+.edu_title2 {
+    padding-top: 6em;
+    width: 100%; height: 18em;
+    display: flex;
+}
+.edu_title2 p {
+    color: #888;
+    font-family: 'LeferiBaseType-BoldA';
+    width: 90%;
+}
+.edu_left .edu_title2 h3 {
+    width: 3.52em;
+}
+.edu_right .edu_title2 h3 {
+    width: 4em;
+}
+.edu_right .edu_title2 h5 {
+    padding-top: 1.22em;
+}
+.edu_right .edu_title2 h5::after {
+    top: 1.39em; left: 4.3em;
+}
+.edu_txt {
+    width: 100%; height: 30em;
+}
+.edu_txt h4 {
+    font-size: 2.4rem;
+    font-family: 'LeferiBaseType-BoldA';
+    color: #391b17;
+    margin-bottom: 0.83em;
+}
+.edu_txt p {
+    height: 4.05em;
+    margin-bottom: 1.38em;
+    padding-right: 5%;
+}
+.nextbox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+.nextbox h5 {
+    height: 100%;
+    padding-right: 3em;
+}
+.nextbox a:nth-of-type(1) h5::after {
+    left: 4.44em;
+}
+.nextbox a:nth-of-type(2) h5::after {
+    left: 5.55em;
+}
+.edu_right .edu_txt ul {
+    width: 100%; height: 24.3em;
+}
+.edu_right .edu_txt li {
+    width: 100%; height: calc(100%/3);
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.6em;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+.edu_right .edu_txt li:nth-child(1)::before {
+    content: "1";
+    font-size: 2.4rem;
+    position: absolute;
+    top: 1em; left: 0;
+}
+.edu_right .edu_txt li:nth-child(2)::before {
+    content: "2";
+    font-size: 2.4rem;
+    position: absolute;
+    top: 1em; left: 0;
+}
+.edu_right .edu_txt li:nth-child(3)::before {
+    content: "3";
+    font-size: 2.4rem;
+    position: absolute;
+    top: 1em; left: 0;
+}
+.edu_right .edu_txt a {
+    font-size: 1.8rem;
+    padding-left: 3em;
+}
+.edu_right .edu_txt a span {
+    font-size: 1.8rem;
+    color: #888;
+}
+
+/* footer */
+
+footer {
+    width: 100%; height: 30em;
+}
+footer .layout_fix {
+    height: 100%;
+}
+footer .layout_fix .logo {
+    width: 100%; height: 12.1em;
+    padding-top: 6.8em;
+}
+footer .layout_fix .logo a {
+    width: 13em; height: 3em;
+    background: url(../images/logo3.png) center no-repeat;
+    background-size: cover;
+}
+.timeselect {
+    width: 100%; height: 10.2em;
+    padding-top: 2.2em;
+    border-top: 1px solid #888;
+    display: flex;
+}
+.timeselect p {
+    width: 58.3%; height: 100%;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    line-height: 1.4em;
+}
+.timeselect .family_box {
+    width: 41.7%; height: 100%;
+    display: flex;
+    justify-content: right;
+}
+.timeselect .family_box select {
+    width: 26em; height: 2.78em;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 0.28em;
+    padding-left: 1.39em;
+    padding-top: 0.2em;
+}
+.timeselect .family_box option {
+    background-color: #fff;
+    z-index: 10;
+}
+.f_content {
+    width:100%; height: 7.8em;
+    display: flex;
+}
+.f_content p {
+    width: 40.17%; height: 100%;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    line-height: 1.4em;
+}
+.f_content ul {
+    width: 59.82%; height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.f_content li {
+    height: 100%;
+}
+.f_content li,
+.f_content li a {
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    line-height: 1.4em;
+    text-align: right;
+}
+#f_select {
+    display: none;
+}
+.btn_box {
+    width: 3.84em; height: 15.36em;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    position: fixed;
+    z-index: 10;
+    top: 75%; right: 1%;
+}
+.btn_box ul {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 1em;
+}
+.btn_box li {
+    width: 1.344em; height: 1.344em;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.btn_box li a {
+    text-align: center;
+    color: #fff;
+    font-family: 'LeferiBaseType-BoldA';
+    width: 100%; height: 100%;
+    border-radius: 50%;
+}
+.btn_box li:last-child {
+    width: 3.07em; height: 1.92em;
+    border-radius: 0;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.btn_box li:last-child a {
+    font-size: 1rem;
+}
+.btn_color {
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+.btn_color a {
+    background-color: #222;
+}
+.message {
+    width: 20em; height: 10em;
+    background-color: #888;
+    border-radius: 5em;
+    position: absolute;
+    top: 40%; right: 40%;
+    opacity: 0;
+    z-index: 30;
+    transition: all .4s;
+}
+.message p {
+    width: 100%; height: 100%;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    line-height: 5em;
+}
+.m_active {
+    opacity: 1;
+    transition: all .4s;
+}
+
+@media screen and (min-width:1441px) and (max-width:1919px) {
+    html {
+        font-size: 9px;
+    }
+    .edu_txt {
+        position: relative;
+    }
+    .nextbox {
+        position: absolute;
+        top: 0; left: 32%;
+    }
+}
+@media screen and (max-width:1440px) {
+    html {
+        font-size: 8px;
+    }
+    .f_content {
+        display: flex;
+        justify-content: space-between;
+    }
+    .f_content ul {
+        display: none;
+    }
+    #f_select {
+        display: block;
+        width: 26em; height: 2.78em;
+        font-size: 1.8rem;
+        border-radius: 0.28em;
+        padding-left: 1.39em;
+        padding-top: 0.2em;
+    }
+}
+@media screen and (max-width:1200px) {
+    html {
+        font-size: 7px;
+    }
+}
+@media screen and (max-width:768px) {
+    html {
+        font-size: 5.5px;
+    }
+    .btn_box li:last-child {
+        position: relative;
+    }
+    .btn_box li:last-child a {
+        visibility: collapse;
+    }
+    .btn_box li:last-child::after {
+        content: "T";
+        text-align: center;
+        color: #fff;
+        width: 100%; height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+    }
+    .nextbox {
+        padding-top: 5em;
+    }
+}
+@media screen and (max-width:640px) {
+    .layout_fix {
+        width: 80%;
+    }
+    .edu_title2 {
+        width: 95%;
+    }
+    header nav {
+        display: none;
+    }
+    .layout_fix .h_menu {
+        visibility: visible;
+    }
+    .sp_txt {
+        padding-top: 22em;
+    }
+}
+@media screen and (max-width:320px) {
+    html {
+        font-size: 5px;
+    }
+    .layout_fix {
+        width: 100%;
+    }
+    header nav {
+        width: 100%;
+    }
+    #left_btn {
+        margin-left: 5em;
+    }
+    #right_btn {
+        margin-right: 5em;
+    }
+    .sp_img {
+        width: 100%;
+        margin: 0;
+        flex-direction: column;
+    }
+    .sp_img li {
+        width: 25%; height: 30vw;
+        margin: 2em;
+    }
+    .sp_img li:nth-of-type(1),
+    .sp_img li:nth-of-type(2),
+    .sp_img li:nth-of-type(5),
+    .sp_img li:nth-of-type(6) {
+        margin: 0; padding: 0;
+    }
+    .sp_img li:nth-of-type(3),
+    .sp_img li:nth-of-type(4) {
+        display: none;
+    }
+    .sp_txt {
+        padding-top: 25em;
+        padding-left: 5em;
+        width: 92%;
+    }
+    .sp_txt h4 {
+        padding-top: 0;
+    }
+    .artist {
+        padding-top: 15em;
+    }
+    .art_title {
+        margin-bottom: 3em;
+    }
+    .art_title h5::after {
+        top: 0.3em;; left: 6em;
+    }
+    .art_img {
+        padding-top: 3em;
+    }
+    .art_txt {
+        flex-direction: column;
+        padding-top: 5em;
+    }
+    .art_txt div {
+        display: flex;
+        width: 100%; height: 100%;
+        margin: 2em 0;
+    }
+    .art_txt div h4 {
+        width: 13%;
+        margin: 0;
+        margin-right: 0.5em;
+        line-height: 3em;
+    }
+    .art_txt div p {
+        width: 85%;
+    }
+    .edu_img {
+        margin-top: 4em;
+    }
+    .edu_right .edu_title1 {
+        margin-left: 2em;
+    }
+    .edu_title1 h5::after {
+        left: 7.5em;
+    }
+    .edu_img {
+        height: 34vw;
+    }
+    .special h3,
+    .artist h3,
+    .edu h3 {
+        font-size: 4rem;
+    }
+    .edu_left .edu_title2 {
+        margin-bottom: 5em;
+        flex-direction: column;
+    }
+    .edu_title2 p {
+        width: 100%;
+    }
+    .nextbox {
+        margin-top: 5em;
+    }
+    .nextbox a:nth-of-type(1) h5::after {
+        left: 5em;
+    }
+    .nextbox a:nth-of-type(2) h5::after {
+        left: 6em;
+    }
+    .edu_txt li {
+        margin: 2em 0;
+    }
+    footer .timeselect {
+        flex-direction: column;
+        margin-bottom: 6em;
+    }
+    footer .timeselect p {
+        width: 100%;
+        margin: 1em 0;
+        line-height: 2.5rem;
+    }
+    .timeselect .family_box,
+    .timeselect .family_box select {
+        width: 100%;
+    }
+    footer .f_content {
+        flex-direction: column-reverse;
+        height: 20em;
+    }
+    #f_select {
+        width: 100%; height: 2.78em;
+    }
+    footer .f_content p {
+        width: 100%;
+        padding: 1em 0;
+        text-align: center;
+    }
+    .layout_fix .h_menu {
+        right: 2%;
+    }
+    .message {
+        right: 33%;
+    }
+}

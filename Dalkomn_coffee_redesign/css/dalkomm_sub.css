@@ -1,0 +1,211 @@
+/* font */
+@font-face {
+    font-family: 'S-CoreDream-4Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* 공통 */
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #222;
+}
+body {
+    font-family: 'S-CoreDream-4Regular';
+}
+ul li {
+    list-style: none;
+}
+a {
+    display: block;
+    text-decoration: none;
+}
+h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #FC731E;
+    margin-bottom: 1em;
+}
+
+/* 개별 */
+
+.subwrap {
+    width: 1320px; height: 2500px;
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    padding: 0 1em;
+}
+.typo {
+    padding-top: 50px;
+    width: 100%; height: 20vh;
+}
+.typo p {
+    margin-bottom: 1rem;
+}
+.typo p:nth-of-type(1) {
+    font-size: 3.75rem;
+}
+.typo p:nth-of-type(2) {
+    font-size: 2.25rem;
+}
+.typo p:nth-of-type(3) {
+    font-size: 1.5rem;
+}
+/* 테이블 */
+.table {
+    width: 100%; height: 20vh;
+    margin-bottom: 200px;
+}
+.table table {
+    width: 100%; height: 100%;
+    text-align: left;
+    vertical-align: middle;
+    border-collapse: collapse;
+}
+.table table caption {
+    display: none;
+}
+.table tr th,
+.table tr td {
+    padding: 17px 25px;
+}
+.table tr:first-child th {
+    border-top: 2px solid #222;
+    border-bottom: 2px solid #222;
+}
+.table tr:last-child th {
+    padding: 50px 25px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    background-color: #eee;
+}
+.table tr td {
+    border-bottom: 2px solid #ccc;
+    color: #666;
+}
+.table tr th:nth-of-type(1),
+.table tr td:nth-of-type(1) {
+    width: 20%;
+}
+.table tr th:nth-of-type(2),
+.table tr td:nth-of-type(2) {
+    width: 20%;
+}
+.table tr th:nth-of-type(3),
+.table tr td:nth-of-type(3) {
+    width: 60%;
+}
+/* 버튼컬러 */
+
+.btnColor {
+    width: 100%; height: 40vh;
+}
+.btnAll {
+    width: 100%; height: 100%;
+    display: flex;
+    background-color: #f2f2f2;
+}
+.btnAll > div {
+    width: calc(100% / 3);
+    margin: 10px;
+}
+.btnColor h5 {
+    width: 100%; height: 20%;
+    margin-left: 10%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: flex-end;
+    margin-top: 50px;
+}
+.btn_box {
+    width: 100%; height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-top: 20px;
+}
+.btn_box button {
+    width: 80%; height: 20%;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-family: 'S-CoreDream-4Regular';
+    border-radius: 2px;
+    border: none;
+}
+.normal button:first-child {
+    background-color: #FC731E;
+    color: #fff;
+}
+.normal button:last-child {
+    background-color: #222;
+    color: #fff;
+}
+.hover button:first-child {
+    background-color: #fff;
+    color: #FC731E;
+}
+.hover button:last-child {
+    background-color: #fff;
+    color: #222;
+}
+.activebtn button:first-child {
+    background-color: #FC731E;
+    color: #fff;
+    transition: all .4s;
+}
+.activebtn button:first-child:hover {
+    background-color: #fff;
+    color: #FC731E;
+    transition: all .4s;
+}
+.activebtn button:last-child {
+    background-color: #222;
+    color: #fff;
+    transition: all .4s;
+}
+.activebtn button:last-child:hover {
+    background-color: #fff;
+    color: #222;
+    transition: all .4s;
+}
+
+/* 색상코드 */
+.color {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%; height: 40vh;
+}
+.color div {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 30px;
+}
+.color h5 {
+    font-size: 1rem; font-weight: 100;
+}
+.color div:nth-of-type(1) {
+    background-color: #FC731E;
+}
+.color div:nth-of-type(2) {
+    background-color: #ccc;
+}
+.color div:nth-of-type(3) {
+    background-color: #fff;
+}
+.color div:nth-of-type(4) {
+    background-color: #666;
+}
+.color div:nth-of-type(5) {
+    background-color: #222;
+}
+.color div:nth-of-type(5) h5,
+.color div:nth-of-type(5) p {
+    color: #fff;
+}

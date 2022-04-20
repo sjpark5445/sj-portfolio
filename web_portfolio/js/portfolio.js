@@ -24,23 +24,23 @@ $(function(){
     });
 
     // 팝업레이어
-    let setModalNum;
-    let getModalTitle = ['온양민속박물관', '새벽별 심리상담센터', '이디야 커피', '프렌즈 펭귄 아기물티슈'];
-    let getModalSub = ['홍보물 디자인', '로고 디자인', '이벤트페이지', '제품 상세페이지'];
+    // let setModalNum;
+    // let getModalTitle = ['온양민속박물관', '새벽별 심리상담센터', '이디야 커피', '프렌즈 펭귄 아기물티슈'];
+    // let getModalSub = ['홍보물 디자인', '로고 디자인', '이벤트페이지', '제품 상세페이지'];
 
-    $('.design .gallery').click(function(){
+    // $('.design .gallery').click(function(){
 
-        setModalNum = $(this).index();
-        function textView(){
-            $('.modal p').eq(setModalNum - 1).show().siblings('p').hide();
-        };
+    //     setModalNum = $(this).index();
+    //     function textView(){
+    //         $('.modal p').eq(setModalNum - 1).show().siblings('p').hide();
+    //     };
         
-        $('.modal h3').text(getModalTitle[setModalNum - 1]);
-        $('.modal h5').text(getModalSub[setModalNum - 1]);
-        textView();
+    //     $('.modal h3').text(getModalTitle[setModalNum - 1]);
+    //     $('.modal h5').text(getModalSub[setModalNum - 1]);
+    //     textView();
 
-        $('.modal').addClass('modalOpen');
-    });
+    //     $('.modal').addClass('modalOpen');
+    // });
 
     $('#modalClose').click(function(){
         $('.modal').removeClass('modalOpen');
