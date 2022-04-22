@@ -5,6 +5,17 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'S-CoreDream-7ExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+    font-family: 'Noto Sans KR', sans-serif;
+}
 /* 공통 */
 
 * {
@@ -14,6 +25,7 @@
 }
 body {
     font-family: 'S-CoreDream-4Regular';
+    padding-top: 120px;
 }
 ul li {
     list-style: none;
@@ -28,19 +40,149 @@ h2 {
     color: #FC731E;
     margin-bottom: 1em;
 }
+.layout_fix2 {
+    width: 68.75%; /* 1320px */
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 /* 개별 */
 
 .subwrap {
-    width: 1320px; height: 2500px;
-    display: grid;
-    grid-template-columns: 1fr;
+    width: 100%; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 120px;
+}
+.subwrap .layout_fix {
+    width: 1320px; height: 100%;
     margin: 0 auto;
     padding: 0 1em;
 }
+
+/* 헤더 */
+
+header {
+    font-family: 'Noto Sans KR', sans-serif;
+    width: 100vw; height: 120px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0; left: 0;
+    z-index: 100;
+}
+header .layout_fix2 {
+    height: 100%;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 로고 */
+header .logo {
+    width: 290px; height: 24px;
+}
+header .logo a, header .logo a img {
+    width: 100%; height: 100%;
+}
+header .logo a img:hover {
+    opacity: 30%;
+    transition: all 0.5s;
+}
+
+/* 메인메뉴 */
+
+header nav {
+    width: 58.33%; height: 100%;
+}
+header nav .main {
+    width: 100%; height: 100%;
+}
+header nav .main ul {
+    width: 100%; height: 100%;
+    display: flex;
+    align-items: center;
+}
+header nav .main li {
+    width: 20%; height: 100%;
+    position: relative;
+}
+header nav .main li a {
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.125rem;
+}
+
+/* 메인메뉴/마우스오버 */
+
+header nav .main li a:hover {
+    color: #fc731e;
+    transition: all 0.5s ease;
+}
+header nav .main li a::before {
+    content: "";
+    width: 0; height: 4px;
+    background-color: #fc731e;
+    position: absolute;
+    bottom: 0; right: 50%;
+}
+header nav .main li a:hover::before {
+    width: 50%;
+    transition: all 0.5s;
+}
+header nav .main li a::after {
+    content: "";
+    width: 0%; height: 4px;
+    background-color: #fc731e;
+    position: absolute;
+    bottom: 0; left: 50%;
+}
+header nav .main li a:hover::after {
+    width: 50%;
+    transition: all 0.5s;
+}
+
+/* 서브메뉴 */
+
+header nav .sub {
+    width: 100%; height: 250px;
+    position: absolute;
+    top: 100%; left: 0;
+    padding: 10px 0;
+    background-color: #222;
+    z-index: 50;
+    display: none;
+}
+header nav .sub ul {
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header nav .sub li {
+    width: 100%; height: 20%;
+}
+header nav .sub li a {
+    color: #fff;
+}
+
+/* 서브메뉴/마우스오버 */
+header nav .sub li a:hover::before {
+    width: 0;
+}
+header nav .sub li a:hover::after {
+    width: 0;
+}
+
+/* 타이포 */
 .typo {
     padding-top: 50px;
-    width: 100%; height: 20vh;
+    width: 100%; height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
 }
 .typo p {
     margin-bottom: 1rem;
@@ -56,11 +198,14 @@ h2 {
 }
 /* 테이블 */
 .table {
-    width: 100%; height: 20vh;
-    margin-bottom: 200px;
+    width: 100%; height: 50vh;
+    margin-bottom: 15vh;
+}
+.table h2 {
+    width: 100%; height: 10%;
 }
 .table table {
-    width: 100%; height: 100%;
+    width: 100%; height: 80%;
     text-align: left;
     vertical-align: middle;
     border-collapse: collapse;
@@ -102,6 +247,7 @@ h2 {
 
 .btnColor {
     width: 100%; height: 40vh;
+    margin-bottom: 15vh;
 }
 .btnAll {
     width: 100%; height: 100%;
@@ -174,13 +320,18 @@ h2 {
 }
 
 /* 색상코드 */
+.colorbox {
+    width: 100%; height: 60vh;
+}
+.colorbox h2 {
+    width: 100%; height: 20%;
+}
 .color {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    width: 100%; height: 40vh;
+    width: 100%; height: 80%;
+    display: flex;
 }
 .color div {
-    width: 100%; height: 100%;
+    width: 20%; height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -208,4 +359,80 @@ h2 {
 .color div:nth-of-type(5) h5,
 .color div:nth-of-type(5) p {
     color: #fff;
+}
+
+/* 푸터 */
+
+footer {
+    width: 100%; height: 340px;
+    font-family: 'Noto Sans KR', sans-serif;
+    white-space: pre-line;
+    background-color: aqua;
+}
+
+/* 메뉴 */
+footer .layout_fix2 {
+    width:1320px; height: 100%;
+}
+footer .layout_fix2 nav {
+    width: 100%; height: 35%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #ccc;
+}
+footer .layout_fix2 nav ul {
+    width: 100%;
+    display: flex;
+}
+footer .layout_fix2 nav li {
+    margin-right: 6.06%;
+}
+footer .layout_fix2 nav li a {
+    font-size: 1.125rem;
+}
+footer .layout_fix2 nav li a:hover {
+    color: #fc731e;
+    transition: all 0.5s;
+}
+
+/* 콘텐츠 */
+
+footer .layout_fix2 .f_content {
+    display: flex;
+    justify-content: space-between;
+}
+footer .layout_fix2 .f_content .info h4 {
+    font-family: 'S-CoreDream-7ExtraBold';
+    font-size: 1.25rem;
+    margin-bottom: 22px;
+}
+footer .layout_fix2 .f_content .info p {
+    font-size: 1.125rem;
+    line-height: 25px;
+}
+footer .layout_fix2 .f_content .family_site {
+    position: relative;
+}
+footer .layout_fix2 .f_content .family_site select {
+    width: 146px;
+    text-align: right;
+    border: none;
+    border-bottom: 1px solid #222;
+    font-family: 'S-CoreDream-7ExtraBold';
+}
+footer .layout_fix2 .f_content .family_site::before {
+    content: "";
+    width: 14px; height: 2px;
+    background-color: #222;
+    position: absolute;
+    top: 11px; left: 7px;
+}
+footer .layout_fix2 .f_content .family_site::after {
+    content: "";
+    width: 14px; height: 2px;
+    background-color: #222;
+    position: absolute;
+    top: 11px; left: 7px;
+    transform: rotate(90deg);
 }
