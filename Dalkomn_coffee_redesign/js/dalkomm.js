@@ -94,6 +94,7 @@ $(function(){
     //-- 스크롤값
     let ostLife;
     let trendy;
+    let playG;
     let $lifeB = $('.imagination');
 
     $(window).scroll(function(){
@@ -104,15 +105,19 @@ $(function(){
         if(webWidth > 1200){
             ostLife=670;
             trendy=2600;
+            playG=3940;
         }else if(webWidth <= 1200 && webWidth > 768){
             ostLife=200;
             trendy=900;
+            playG=2150;
         }else if(webWidth <= 768 && webWidth > 640){
             ostLife=100;
             trendy=626;
+            playG=1480;
         }else{
             ostLife=0;
             trendy=300;
+            playG=1100;
         }
 
         //-- css적용
@@ -131,6 +136,10 @@ $(function(){
             setTimeout(function(){
                 $('.trendy p').css({opacity: 1, transition: 'all 1s'});
             },600);
+        }
+
+        if(scrTop >= playG){
+            $('.play_g_img div').css({height:0});
         }
     });
 
