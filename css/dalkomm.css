@@ -273,15 +273,15 @@ header nav .sub li a:hover::after {
     width: 66.14%; height: 100%; /*1270px*/
 }
 .slide .slide1 .img_box {
-    background: url(../Dalkomn_coffee_redesign/images/coffeeandbread.png) center no-repeat;
+    background: url(../dalkomm_images/coffeeandbread.png) center no-repeat;
     background-size: cover;
 }
 .slide .slide2 .img_box {
-    background: url(../Dalkomn_coffee_redesign/images/slide2.jpg) center no-repeat;
+    background: url(../dalkomm_images/images/slide2.jpg) center no-repeat;
     background-size: cover;
 }
 .slide .slide3 .img_box {
-    background: url(../Dalkomn_coffee_redesign/images/slide3.jpg) center no-repeat;
+    background: url(../dalkomm_images/images/slide3.jpg) center no-repeat;
     background-size: cover;
 }
 /* 텍스트파트 */
