@@ -61,4 +61,19 @@ $(function(){
     setTimeout(function(){
         $('.title h4').css({opacity:1, top:'55%'});
     }, 500);
+
+    // 웹페이지 상세
+
+    $('.web .txt:first span').click(function(){
+        $('.web_txt:first').toggleClass('webact');
+    });
+    $('.web .txt:last span').click(function(){
+        $('.web_txt:last').toggleClass('webact');
+    });
+    $('.web_txt:first > a').click(function(){
+        $('.web_txt:first').removeClass('webact');
+    });
+    $('.web_txt:last > a').click(function(){
+        $('.web_txt:last').removeClass('webact');
+    });
 });

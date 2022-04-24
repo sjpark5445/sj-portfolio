@@ -1,10 +1,6 @@
 /* 폰트 */
 
-/* @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
-
-.notosanskr * { 
- font-family: 'Noto Sans KR', sans-serif;
-} */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
 /* 공통 */
 
@@ -13,12 +9,10 @@
     box-sizing: border-box;
     color: #333;
     word-break: keep-all;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 html {
-    font-size: 16px;
-}
-body {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 20px;
 }
 ul li {
     list-style: none;
@@ -73,12 +67,13 @@ p {
 }
 .txt p {
     font-size: 1rem;
+    line-height: 1.3rem;
     word-break: normal;
 }
 /* 표지 */
 header {
     width: 100%;
-    background-color: #222;
+    background-color: #111;
     position: relative;
     overflow: hidden;
 }
@@ -113,22 +108,24 @@ header {
 }
 .circle1 {
     width: 70vw; height: 70vw;
-    background-color: #84ff29;
+    background-color: #222;
     position: absolute;
     bottom: -20%; left: 100%;
     border-radius: 50%;
     transition: all .5s ease-out;
+    /* visibility: hidden; */
 }
 .circle2 {
     width: 30vw; height: 30vw;
-    background-color: #fff;
+    background-color: #333;
     position: absolute;
     bottom: -60%; left: 50%;
     border-radius: 50%;
     transition: all .5s ease-out;
+    /* visibility: hidden; */
 }
 .logo {
-    width: 10.41vw; height: 2.08vw;
+    width: 10.6vw; height: 2.08vw;
     display: flex;
     align-items: center;
 }
@@ -201,6 +198,14 @@ header nav li a:hover {
 }
 .web .txt a {
     width: 40%;
+    font-weight: 600;
+}
+.web .txt a span {
+    font-size: 1rem;
+    color: #888;
+}
+.web .txt a span:hover {
+    color: #444;
 }
 
 /* 디자인 */
@@ -249,7 +254,7 @@ header nav li a:hover {
 /* 연락처 */
 footer {
     width: 100%; height: 30em;
-    background-color: #222;
+    background-color: #111;
 }
 footer .layout_fix {
     display: flex;
@@ -369,4 +374,100 @@ footer .layout_fix nav a span {
 
 .gallery:hover > .style_guide {
     visibility: visible;
+}
+
+/* 웹 상세 */
+
+.web_txt {
+    width: 30%; height: 100vh;
+    position: fixed;
+    top: 0; right: -30%;
+    background-color: #111;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10vh;
+    transition: all .4s ease-in-out;
+}
+.web_txt > div {
+    width: 94%; height: 23%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2vw;
+}
+.web_txt h4 {
+    color: #84ff29;
+    width: 100%; height: 20%;
+    font-size: 1.5rem;
+}
+.web_txt p {
+    color: #fff;
+    width: 100%; height: 40%;
+    font-size: 1rem;
+    line-height: 1.3em;
+    display: flex;
+    align-items: center;
+}
+.web_txt > div div {
+    width: 100%; height: 40%;
+    display: flex;
+    align-items: center;
+}
+.web_txt .colorbox a {
+    border-radius: 50%;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.webbox1 .colorbox a:first-child {
+    width: 3vw; height: 3vw;
+    background-color: #ed7126;
+    color: #ed7126;
+}
+.webbox1 .colorbox a:last-child {
+    width: 3vw; height: 3vw;
+    background-color: #e12d22;
+    color: #e12d22;
+    margin-left: 0.5vw;
+}
+.webbox2 .colorbox a:first-child {
+    width: 3vw; height: 3vw;
+    background-color: #b3a174;
+    color: #b3a174;
+}
+.webbox2 .colorbox a:last-child {
+    width: 3vw; height: 3vw;
+    background-color: #391a17;
+    color: #391a17;
+    margin-left: 0.5vw;
+}
+.web_txt .colorbox a:hover {
+    color: #fff;
+}
+.web_txt ul {
+    width: 100%; height: 100%;
+}
+.web_txt ul li {
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.3em;
+    list-style: disc;
+    margin-left: 1rem;
+}
+.web_txt > a {
+    position: absolute;
+    top: 7.7vw; right: 0;
+    color: #fff;
+    font-size: 2rem;
+    width: 4vw; height: 4vw;
+}
+.webact {
+    right: 0;
+    transition: all .4s ease-in-out;
 }
