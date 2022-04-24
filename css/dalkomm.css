@@ -273,15 +273,15 @@ header nav .sub li a:hover::after {
     width: 66.14%; height: 100%; /*1270px*/
 }
 .slide .slide1 .img_box {
-    background: url(../images/coffeeandbread.png) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/coffeeandbread.png) center no-repeat;
     background-size: cover;
 }
 .slide .slide2 .img_box {
-    background: url(../images/slide2.jpg) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/slide2.jpg) center no-repeat;
     background-size: cover;
 }
 .slide .slide3 .img_box {
-    background: url(../images/slide3.jpg) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/slide3.jpg) center no-repeat;
     background-size: cover;
 }
 /* 텍스트파트 */
@@ -359,42 +359,42 @@ header nav .sub li a:hover::after {
 .imagination .float_top li:nth-of-type(1) {
     left: 0; bottom: -15.625vw;
     transition: all 0.5s;
-    background: url(../images/springtea.png) no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/springtea.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
 .imagination .float_top li:nth-of-type(2) {
     left: 16.875vw; bottom: -15.625vw;
     transition: all 1s;
-    background: url(../images/Hallabong_Juice.png) no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/Hallabong_Juice.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
 .imagination .float_top li:nth-of-type(3) {
     left: 33.75vw; bottom: -15.625vw;
     transition: all 1.5s;
-    background: url(../images/Hallabong_ade.png) no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/Hallabong_ade.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
 .imagination .float_top li:nth-of-type(4) {
     left: 50.625vw; bottom: -15.625vw;
     transition: all 2s;
-    background: url(../images/Spring-Blossom-Blended.png) no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/Spring-Blossom-Blended.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
 .imagination .float_top li:nth-of-type(5) {
     left: 67.5vw; bottom: -15.625vw;
     transition: all 2.5s;
-    background: url(../images/Jeju-Geentea-Cafelatte-H.png) no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/Jeju-Geentea-Cafelatte-H.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
 .imagination .float_top li:nth-of-type(6) {
     left: 84.375vw; bottom: -15.625vw;
     transition: all 3s;
-    background: url(../images/Jeju-Geentea-Blended.png) no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/Jeju-Geentea-Blended.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -402,7 +402,7 @@ header nav .sub li a:hover::after {
 /* 시그니처 메뉴 */
 .signature {
     width: 100%; height: 43.54vw;
-    background: url(../images/signature_bg.jpg) left top no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/signature_bg.jpg) left top no-repeat;
     background-size: cover;
     display: flex;
     justify-content: space-between;
@@ -471,27 +471,27 @@ header nav .sub li a:hover::after {
     width: 50%; height: 100%;
 }
 .signature .layout_fix .menu1 div:nth-of-type(1) {
-    background: url(../images/honeymong_ice_clearbg.png) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/honeymong_ice_clearbg.png) center no-repeat;
     background-size: cover;
 }
 .signature .layout_fix .menu1 div:nth-of-type(2) {
-    background: url(../images/honeymong_hot_clearbg.png) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/honeymong_hot_clearbg.png) center no-repeat;
     background-size: cover;
 }
 .signature .layout_fix .menu2 div:nth-of-type(1) {
-    background: url(../images/springtea_ice.png) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/springtea_ice.png) center no-repeat;
     background-size: cover;
 }
 .signature .layout_fix .menu2 div:nth-of-type(2) {
-    background: url(../images/springtea_hot.png) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/springtea_hot.png) center no-repeat;
     background-size: cover;
 }
 .signature .layout_fix .menu3 div:nth-of-type(1) {
-    background: url(../images/grapefruit_ice.png) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/grapefruit_ice.png) center no-repeat;
     background-size: cover;
 }
 .signature .layout_fix .menu3 div:nth-of-type(2) {
-    background: url(../images/grapefruit_hot.png) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/grapefruit_hot.png) center no-repeat;
     background-size: cover;
 }
 
@@ -570,7 +570,7 @@ header nav .sub li a:hover::after {
 }
 .trendy .trendy_sec2 .t2_right .t2_img {
     width: 100%; height: 494px;
-    background: url(../images/trendy.jpg) left top no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/trendy.jpg) left top no-repeat;
     background-size: cover;
 }
 .trendy .trendy_sec2 .t2_right .t2_bot {
@@ -610,7 +610,7 @@ header nav .sub li a:hover::after {
 
 .playground {
     width: 100%; height: 776px;
-    background: url(../images/play_g_bg.jpg) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/play_g_bg.jpg) center no-repeat;
     background-size: cover;
 }
 .playground .layout_fix {
@@ -656,7 +656,7 @@ header nav .sub li a:hover::after {
 /* 이미지파트 */
 .playground .layout_fix .play_g_img {
     width: 55%; height: 510px;
-    background: url(../images/garden.jpg) center no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/garden.jpg) center no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -699,7 +699,7 @@ header nav .sub li a:hover::after {
 .news .layout_fix .news_title h4::after {
     content: "";
     width: 22.22%; height: 14px;
-    background: url(../images/viewmore.png) right no-repeat;
+    background: url(../Dalkomn_coffee_redesign/images/viewmore.png) right no-repeat;
     background-size: cover;
     position: absolute;
     top: 10px; left: 110%;
@@ -743,7 +743,7 @@ header nav .sub li a:hover::after {
 }
 .news .layout_fix .news_box li:nth-of-type(1) a {
     background-color: rgba(0, 0, 0, 0);
-    background-image: url(../images/news1.png);
+    background-image: url(../Dalkomn_coffee_redesign/images/news1.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -755,7 +755,7 @@ header nav .sub li a:hover::after {
 }
 .news .layout_fix .news_box li:nth-of-type(2) a {
     background-color: rgba(0, 0, 0, 0);
-    background-image: url(../images/news2.png);
+    background-image: url(../Dalkomn_coffee_redesign/images/news2.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -767,7 +767,7 @@ header nav .sub li a:hover::after {
 }
 .news .layout_fix .news_box li:nth-of-type(3) a {
     background-color: rgba(0, 0, 0, 0);
-    background-image: url(../images/news3.png);
+    background-image: url(../Dalkomn_coffee_redesign/images/news3.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -840,7 +840,7 @@ header nav .sub li a:hover::after {
 }
 .app .layout_fix .app_img a {
     width: 100%; height: 100%;
-    background:url(../images/app.png) center top no-repeat;
+    background:url(../Dalkomn_coffee_redesign/images/app.png) center top no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;

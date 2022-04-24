@@ -5,12 +5,12 @@ $(function(){
     function menuDown(){
         slideSub.stop().slideDown(300);
         $('header').css({backgroundColor:'#fff', transition:'all .5s'});
-        $('.logo a').css({backgroundImage:'url(images/logo2.png)', backgroundSize:'cover'});
+        $('.logo a').css({backgroundImage:'url(onyang/images/logo2.png)', backgroundSize:'cover'});
     };
     function menuUp(){
         slideSub.stop().slideUp(300);
         $('header').css({backgroundColor:'rgba(0, 0, 0, 0.3)', transition:'all .5s'});
-        $('.logo a').css({backgroundImage:'url(images/logo.png)', backgroundSize:'cover'});
+        $('.logo a').css({backgroundImage:'url(onyang/images/logo.png)', backgroundSize:'cover'});
     };
 
     $('nav, .sub').mouseover(function(){
