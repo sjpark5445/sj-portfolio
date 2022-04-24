@@ -352,7 +352,7 @@ header nav .sub li a:hover::after {
     position: absolute;
     width: 15.10vw; height: 15.10vw;
     border-radius: 50%;
-    visibility: hidden;
+    opacity: 0;
 }
 /* 이미지 개별서식 */
 .imagination .float_top li:nth-of-type(1) {
@@ -410,96 +410,92 @@ header nav .sub li a:hover::after {
 }
 .signature .layout_fix {
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .signature .layout_fix .sig_menu {
-    width: 100%; height: 100%;
+    width: 100%; height: 60%;
     display: flex;
 }
-.signature .layout_fix .sig_menu ul {
-    width: 70%; height: 100%;
+.signature .layout_fix .sig_txt {
+    width: 35%; height: 100%;
+    margin-left: 10%;
+    padding-top: 5%;
+}
+.signature .layout_fix .sig_txt h3 {
+    font-size: 3.75rem;
+    font-family: 'S-CoreDream-7ExtraBold';
+    color: #f0271f;
+    margin-bottom: 4rem;
+}
+.signature .layout_fix .sig_txt .sig_name {
+    font-size: 2.25rem;
+    font-family: 'S-CoreDream-7ExtraBold';
+    color: #f0271f;
+    word-break: keep-all;
+}
+.signature .layout_fix .sig_txt div:nth-of-type(2) div:nth-of-type(2) {
+    font-size: 1.56rem;
+    font-family: 'S-CoreDream-7ExtraBold';
+    color: #f0271f;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
+    padding-left: 1rem;
+}
+.signature .layout_fix .sig_txt div:nth-of-type(2) {
+    display: flex;
+}
+.signature .layout_fix .set_txt {
+    word-break: keep-all;
+    font-size: 1.56rem;
+    padding-top: 1.5rem;
+    width: 80%;
+}
+.signature .layout_fix .sig_img {
+    width: 55%; height: 100%;
     position: relative;
-    padding-left: 8.33%;
+    overflow: hidden;
 }
-.signature .layout_fix .sig_menu li {
-    width: 100%; height: 100%;
+.signature .layout_fix .sig_img ul {
+    width: 300%; height: 100%;
+    display: flex;
     position: absolute;
-    top: 0; left: 0;
+}
+.signature .layout_fix .sig_img li {
+    width: calc(100% / 3); height: 100%;
     display: flex;
 }
-.signature .layout_fix .sig_menu li div {
+.signature .layout_fix .sig_img li div {
     width: 50%; height: 100%;
 }
-.signature .layout_fix .sig_menu li div:last-child {
-    position: absolute;
-    top: 9%; left: 30%;
-}
-
-/* 시그니처 내용물 */
-.signature .layout_fix .sig_menu li:nth-of-type(1) div:first-child {
+.signature .layout_fix .menu1 div:nth-of-type(1) {
     background: url(../images/honeymong_ice_clearbg.png) center no-repeat;
     background-size: cover;
 }
-.signature .layout_fix .sig_menu li:nth-of-type(1) div:last-child {
+.signature .layout_fix .menu1 div:nth-of-type(2) {
     background: url(../images/honeymong_hot_clearbg.png) center no-repeat;
     background-size: cover;
 }
-.signature .layout_fix .sig_menu li:nth-of-type(2) div:first-child {
-    background: url(../images/berrycube.png) center no-repeat;
+.signature .layout_fix .menu2 div:nth-of-type(1) {
+    background: url(../images/springtea_ice.png) center no-repeat;
     background-size: cover;
 }
-.signature .layout_fix .sig_menu li:nth-of-type(2) div:last-child {
-    background-color: rgba(0, 0, 0, 0);
-}
-.signature .layout_fix .sig_menu li:nth-of-type(3) div:first-child {
-    background: url(../images/mangocube.png) center no-repeat;
+.signature .layout_fix .menu2 div:nth-of-type(2) {
+    background: url(../images/springtea_hot.png) center no-repeat;
     background-size: cover;
 }
-.signature .layout_fix .sig_menu li:nth-of-type(3) div:last-child {
-    background-color: rgba(0, 0, 0, 0);
+.signature .layout_fix .menu3 div:nth-of-type(1) {
+    background: url(../images/grapefruit_ice.png) center no-repeat;
+    background-size: cover;
+}
+.signature .layout_fix .menu3 div:nth-of-type(2) {
+    background: url(../images/grapefruit_hot.png) center no-repeat;
+    background-size: cover;
 }
 
-.signature .layout_fix .sig_menu .sig_txt {
-    width: 30%; height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 8.78%;
-    position: relative;
-}
-.signature .layout_fix .sig_menu .sig_txt h3 {
-    font-family: 'S-CoreDream-7ExtraBold';
-    font-size: 3.75rem;
-    margin-bottom: 64px;
-    letter-spacing: -0.125rem;
-    color: #f0271f;
-}
-.signature .layout_fix .sig_menu .sig_txt h4 {
-    font-family: 'S-CoreDream-7ExtraBold';
-    font-size: 1.825rem;
-    margin-bottom: 28px;
-    letter-spacing: -0.125rem;
-    color: #f0271f;
-}
-.signature .layout_fix .sig_menu .sig_txt h4 span {
-    font-family: 'S-CoreDream-7ExtraBold';
-    font-size: 1.825rem;
-    letter-spacing: 0px;
-    padding-left: 1rem;
-    color: #f0271f;
-}
-.signature .layout_fix .sig_menu .sig_txt p {
-    font-size: 1.825rem;
-    letter-spacing: -0.125rem;
-    line-height: 2.5rem;
-    color:#222;
-    position: absolute;
-    top: 60%; left: 30%;
-}
-.signature .red_btn {
-    display: none;
-}
+/* 시그니처 내용물 */
+
 
 /* 가장 트렌디한 커피전문점 */
 /* 상단부 */
@@ -514,6 +510,11 @@ header nav .sub li a:hover::after {
 .trendy h3 {
     font-family: 'S-CoreDream-7ExtraBold';
     color: #fc731e;
+}
+.trendy h3,
+.trendy p,
+.trendy h4 {
+    opacity: 0;
 }
 .trendy .trendy_sec1 h3 {
     font-size: 3.75rem;
@@ -1131,30 +1132,33 @@ footer .layout_fix .f_content .family_site::after {
 
     /* 시그니처 */
 
-    .signature .layout_fix .sig_menu .sig_txt h3 {
-        margin-bottom: 20px;
-        font-size: 3rem;
+    .signature .layout_fix .sig_menu {
+        height: 45%;
     }
-    .signature .layout_fix .sig_menu .sig_txt h4,
-    .signature .layout_fix .sig_menu .sig_txt h4 span,
-    .signature .layout_fix .sig_menu .sig_txt p {
+    .signature .layout_fix .sig_txt h3 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    .signature .layout_fix .sig_txt .sig_name {
         font-size: 1.5rem;
+        word-break: keep-all;
     }
-    .signature .layout_fix .sig_menu .sig_txt h4 {
-        margin-bottom: 15px;
+    .signature .layout_fix .sig_txt div:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
-    .signature .layout_fix .sig_menu .sig_txt {
-        width: 40%;
+    .signature .layout_fix .sig_txt div:nth-of-type(2) div:nth-of-type(2) {
+        font-size: 1rem;
+        word-break: keep-all;
+        padding: 0;
     }
-    .signature .layout_fix .sig_menu ul {
-        padding-bottom: 60px;
-        width: 60%;
-    }
-    .signature .layout_fix .sig_menu li:first-child img {
-        width: 80%;
-    }
-    .signature .layout_fix .sig_menu li img:last-child {
+    .signature .layout_fix .set_txt {
+        font-size: 1.3rem;
         width: 100%;
+    }
+    .signature .layout_fix .sig_img {
+        width: 60%;
     }
 
     /* 가장 트렌디한 */
@@ -1296,15 +1300,12 @@ footer .layout_fix .f_content .family_site::after {
     }
 
     /* 시그니처 */
-    .signature {
-        height: 440px;
+
+    .signature .layout_fix .sig_menu {
+        height: 37%;
     }
-    .signature .layout_fix .sig_menu ul {
-        width: 55%;
-        padding-bottom: 70px;
-    }
-    .signature .layout_fix .sig_menu .sig_txt {
-        width: 45%;
+    .signature .layout_fix .sig_txt h3 {
+        margin-bottom: 1rem;
     }
 
     /* 가장 트렌디한 */
@@ -1396,67 +1397,43 @@ footer .layout_fix .f_content .family_site::after {
         display: none;
     }
 
+    /* 상상일상 */
+
+    .imagination .layout_fix p {
+        padding-top: 150px;
+    }
+
     /* 시그니처 */
 
-    .signature {
-        height: 450px;
-    }
-    .signature .layout_fix {
-        position: relative;
-    }
-    .signature .red_btn {
-        content: "";
-        width: 35vw; height: 10vw;
-        border-radius: 20px;
-        background-color: #f0271f;
-        position: absolute;
-        top: 63%; left: 32%;
-        display: block;
-    }
-    .signature .red_btn::before {
-        content: "메뉴 더보기";
-        font-family: 'S-CoreDream-7ExtraBold';
-        font-size: 2rem;
-        text-align: center;
-        line-height: 150%;
-        color: #fff;
-        width: 32vw; height: 7.5vw;
-        border-radius: 20px;
-        border: 2px dashed #fff;
-        position: absolute;
-        top: 6.5%; left: 2%;
-        z-index: 10;
-    }
     .signature .layout_fix .sig_menu {
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 50%;
     }
-    .signature .layout_fix .sig_menu .sig_txt {
-        width: 100%; height: 50px;
-        padding-top: 130px;
-        margin-bottom: 35px;
-        display: flex;
-        align-items: center;
+    .signature .layout_fix .sig_txt {
+        width: 100%; height: 30%;
+        margin: 0;
+    }
+    .signature .layout_fix .sig_txt h3 {
+        margin-bottom: 0.5rem;
         text-align: center;
-        padding-left: 0;
     }
-    .signature .layout_fix .sig_menu .sig_txt h3,
-    .signature .layout_fix .sig_menu .sig_txt h4 {
-        width: 100%;
+    .signature .layout_fix .sig_img {
+        width: 80%; height: 55%;
     }
-    .signature .layout_fix .sig_menu .sig_txt h3 {
-        margin-bottom: 5px;
-        font-size: 4rem;
-    }
-    .signature .layout_fix .sig_menu .sig_txt p {
+    .signature .layout_fix .set_txt {
         display: none;
+        margin: 0;
     }
-    .signature .layout_fix .sig_menu ul {
+    .signature .layout_fix .sig_txt div:nth-of-type(2) {
         display: flex;
-        justify-content: left;
+        flex-direction: row;
         align-items: flex-end;
-        height: 53%;
+        justify-content: center;
+    }
+    .signature .layout_fix .sig_txt div:nth-of-type(2) div:nth-of-type(2) {
+        margin-left: 0.5rem;
     }
 
     /* 가장 트렌디한 */
@@ -1490,11 +1467,17 @@ footer .layout_fix .f_content .family_site::after {
     }
 
     /* 플레이 그라운드 */
+
+    .playground .layout_fix {
+        display: flex;
+        flex-direction: column;
+    }
     .playground .layout_fix .play_g_txt {
         width: 100%; height: 130px;
+        margin-bottom: 50px;
     }
     .playground .layout_fix .play_g_img {
-        display: none;
+        width: 100%; height: 260px;
     }
 
     /* 뉴스 */
