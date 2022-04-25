@@ -12,7 +12,7 @@
     font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
 }
 html {
-    font-size: 20px;
+    font-size: 18px;
 }
 ul li {
     list-style: none;
@@ -29,6 +29,7 @@ h3 {
 }
 p {
     white-space: pre-line;
+    font-weight: 500;
 }
 
 /* 개별 */
@@ -407,20 +408,20 @@ footer .layout_fix nav a span {
 }
 .web_txt p {
     color: #fff;
-    width: 100%; height: 40%;
+    width: 100%; height: 50%;
     font-size: 1rem;
     line-height: 1.3em;
     display: flex;
     align-items: center;
 }
 .web_txt > div div {
-    width: 100%; height: 40%;
+    width: 100%; height: 50%;
     display: flex;
     align-items: center;
 }
 .web_txt .colorbox a {
     border-radius: 50%;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     display: flex;
     align-items: center;
     justify-content: center;
