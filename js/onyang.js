@@ -1,6 +1,6 @@
 // onyang
 $(function(){
-    // menu
+    // menu slidedown
     let slideSub = $('.sub, .sub_box');
     function menuDown(){
         slideSub.stop().slideDown(300);
